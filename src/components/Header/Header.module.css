@@ -12,4 +12,5 @@
 
 .header strong {
   font-size: 1.625rem;
+  color: var(--gray-100);
 }
