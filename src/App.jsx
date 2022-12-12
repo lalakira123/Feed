@@ -1,5 +1,6 @@
 import { Header } from './components/Header/Header'
 import { Aside } from './components/Aside/Aside'
+import { Post } from './components/Post/Post'
 
 import style from './App.module.css'
 
@@ -10,7 +11,10 @@ function App() {
 
       <div className={style.wrapper}>
         <Aside/>
-        <main>b</main>
+        <main>
+          <Post />
+          <Post />
+        </main>
       </div>
     </>
   )
