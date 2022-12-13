@@ -14,7 +14,10 @@ export function Aside() {
 			/>
 
 			<div className={style.profile}>
-				<Avatar hasBorder />
+				<Avatar
+				  imageUrl='https://github.com/lalakira123.png' 
+				  hasBorder 
+				/>
 				<strong>Laerte Akira</strong>
 				<span>Developer Full Stack</span>
 			</div>

@@ -1,10 +1,10 @@
 import style from './Avatar.module.css'
 
-export function Avatar({ hasBorder }) {
+export function Avatar({ imageUrl, hasBorder }) {
 	return(
 		<img 
       className={ hasBorder ? style.avatar : style.avatarWithoutBorder }
-      src='https://github.com/lalakira123.png'
+      src={imageUrl}
       alt='Foto Perfil'
     />
 	);
