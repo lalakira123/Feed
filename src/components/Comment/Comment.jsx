@@ -4,7 +4,11 @@ import { Avatar } from './../Avatar/Avatar'
 
 import style from './Comment.module.css'
 
-export function Comment({ comment }){
+export function Comment({ comment, onDeleteComment }){
+	function handleDeleteComment() {
+		onDeleteComment(comment);
+	}
+
 	return(
 		<div className={style.comment}>
 			<Avatar 
@@ -15,7 +19,7 @@ export function Comment({ comment }){
 				<div className={style.commentBox}>
 					<div className={style.commentProfile}>
 						<strong>Laerte Akira<span>(você)</span></strong>
-						<button className={style.trash}>
+						<button className={style.trash} onClick={handleDeleteComment}>
 							<Trash/>
 						</button>
 					</div>

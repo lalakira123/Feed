@@ -32,6 +32,16 @@ export function Post({ author, publishedAt, contents }) {
     setNewComment(event.target.value);
   }
 
+  function deleteComment(commentToDelete) {
+    const commentWhitoutDeletedOne = comments.filter(comment => {
+      return comment != commentToDelete;
+    });
+
+    console.log(commentWhitoutDeletedOne);
+
+    setComments(commentWhitoutDeletedOne);
+  }
+
   return(
     <article className={style.post}>
       <header>
@@ -79,6 +89,7 @@ export function Post({ author, publishedAt, contents }) {
             <Comment 
               key={comment}
               comment={comment}
+              onDeleteComment={deleteComment}
             />
           )
         })}
