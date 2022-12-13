@@ -55,9 +55,9 @@ export function Post({ author, publishedAt, contents }) {
       <div className={style.content}>
         {contents.map(content => {
           if(content.type == 'paragraph') {
-            return <p>{content.content}</p>
+            return <p key={content.content}>{content.content}</p>
           } else if(content.type == 'link') {
-            return <p><a href='#'>{content.content}</a></p>
+            return <p key={content.content}><a href='#'>{content.content}</a></p>
           }
         })}
       </div>
@@ -77,6 +77,7 @@ export function Post({ author, publishedAt, contents }) {
         {comments.map(comment => {
           return (
             <Comment 
+              key={comment}
               comment={comment}
             />
           )
