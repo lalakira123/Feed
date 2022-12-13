@@ -4,7 +4,7 @@ import { Avatar } from './../Avatar/Avatar'
 
 import style from './Comment.module.css'
 
-export function Comment(){
+export function Comment({ comment }){
 	return(
 		<div className={style.comment}>
 			<Avatar 
@@ -20,7 +20,7 @@ export function Comment(){
 						</button>
 					</div>
 					<time title='12 de Dezembro às 20:35h' dateTime="2022-12-12 20:35:10">Cerca de 2h</time>
-					<p>Adorei o seu novo portifa Devon!</p>
+					<p>{comment}</p>
 				</div>
 				<button>
 					<ThumbsUp/> 
