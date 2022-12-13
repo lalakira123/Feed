@@ -1,4 +1,7 @@
 import { PencilLine } from 'phosphor-react'
+
+import { Avatar } from './../Avatar/Avatar'
+
 import style from './Aside.module.css'
 
 export function Aside() {
@@ -11,10 +14,7 @@ export function Aside() {
 			/>
 
 			<div className={style.profile}>
-				<img
-					src='https://github.com/lalakira123.png'
-					alt='Foto Perfil'
-				/>
+				<Avatar hasBorder />
 				<strong>Laerte Akira</strong>
 				<span>Developer Full Stack</span>
 			</div>
