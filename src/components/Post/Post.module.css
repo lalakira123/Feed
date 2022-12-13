@@ -92,9 +92,14 @@ form > button {
   max-height: 0;
 }
 
-form > button:hover {
+form > button:not(:disabled):hover {
   background-color: var(--green-300);
   cursor: pointer;
+}
+
+form > button:disabled { 
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 form:focus-within button{
