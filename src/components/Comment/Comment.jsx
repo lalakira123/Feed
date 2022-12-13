@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import { ThumbsUp, Trash } from "phosphor-react"
 
 import { Avatar } from './../Avatar/Avatar'
@@ -5,8 +7,14 @@ import { Avatar } from './../Avatar/Avatar'
 import style from './Comment.module.css'
 
 export function Comment({ comment, onDeleteComment }){
+	const [ like, setLike ] = useState(0);
+
 	function handleDeleteComment() {
 		onDeleteComment(comment);
+	}
+
+	function handleLikeComment() {
+		setLike(like + 1);
 	}
 
 	return(
@@ -26,9 +34,9 @@ export function Comment({ comment, onDeleteComment }){
 					<time title='12 de Dezembro às 20:35h' dateTime="2022-12-12 20:35:10">Cerca de 2h</time>
 					<p>{comment}</p>
 				</div>
-				<button>
+				<button onClick={handleLikeComment}>
 					<ThumbsUp/> 
-					Aplaudir <span>33</span>
+					Aplaudir <span>{like}</span>
 				</button>
 			</div>
 		</div>
